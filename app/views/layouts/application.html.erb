@@ -11,6 +11,24 @@
 
   <body>
     <%= render 'partial/navbar' %>
-    <%= yield %>
+    <%# メールアドレスが正しくない状態でログインしようとしたときに、ログインに失敗した旨をメッセージとして表示 %>
+    <% if flash[:notice] %>
+    <div class="alert alert-info">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+  <%# ここまで %>
+
+
+
+
+
+
+  <%= yield %>
   </body>
 </html>　
