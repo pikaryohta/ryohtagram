@@ -1,4 +1,7 @@
-<p>このページはトップページです。</p>
+<% if user_signed_in? %>  <!--user_signed_in?はDeviseを入れることで使えるようになるヘルパーメソッド -->
+  <!--もしユーザーがサインインしていれば、サインアウトリンクを表示させる-->
+  <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+<% end %>
 
-<%# ここに追加する %>
-<%= link_to "仮のボタンをとりあえず配置", "#", class: "btn btn-primary" %>
+<p>このページは仮のトップページです。</p>
+<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>
