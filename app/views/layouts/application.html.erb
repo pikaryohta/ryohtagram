@@ -20,7 +20,11 @@
     <% if flash[:alert] %>
       <div class="alert alert-danger"><%= flash[:alert] %></div>
     <% end %>
-    <%= yield %>
+    <%# ==========ここにcontainerクラスを追加する========== %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%# ==========divの閉じタグを追加========== %>
 
     <%# ========== partial/footerを追加する ========== %>
     <%= render 'partial/footer' %>
