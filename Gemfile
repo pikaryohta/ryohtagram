@@ -14,9 +14,14 @@ gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 
+
 group :development, :test do
   gem 'sqlite3', '1.4.1'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'better_errors'
+  #==>デバッグ用gem
+  gem 'binding_of_caller'
+  #==>デバッグ用gem
 end
 
 group :development do
@@ -44,3 +49,5 @@ end
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'
