@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # resources :users, only: %i(show show)
 
   # 投稿機能で使うルーティングの追加
-  resources :posts, only: %i(new create index) do
-  resources :photos, only: %i(create)
+  resources :posts, only: %i(index new create show destroy) do
+    resources :photos, only: %i(create)
   end
 end
