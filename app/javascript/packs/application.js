@@ -17,4 +17,5 @@ require("channels")
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require require_tree .
+//require_tree .は現在のディレクトリにある全てのJavaScriptファイルを読み込む
+//= require require_tree .　　　　　

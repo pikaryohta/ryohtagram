@@ -1,5 +1,7 @@
-<% if user_signed_in? %>  <!--user_signed_in?はDeviseを入れることで使えるようになるヘルパーメソッド -->
-  <!--もしユーザーがサインインしていれば、サインアウトリンクを表示させる-->
+<!--user_signed_in?はDeviseを入れることで使えるようになるヘルパーメソッド -->
+
+<% if user_signed_in? %>   <!--もしユーザーがサインインしていれば、サインアウトリンクを表示させる-->
+
   <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
 <% end %>
 

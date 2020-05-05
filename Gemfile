@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'rails',      '6.0.0'
 gem 'bootstrap', '~> 4.4.1'
 gem 'devise', '~> 4.7.1'
+    #==>create  config/initializers/devise.rb
+    #==>create  config/locales/devise.en.yml
 gem 'railties', '>= 6.0.0'
 gem 'puma',       '3.12.1'
 gem 'sass-rails', '5.1.0'
