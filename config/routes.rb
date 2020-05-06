@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   # 投稿機能で使うルーティングの追加
   resources :posts, only: %i(index new create show destroy) do
     resources :photos, only: %i(create)
+
+
+  resources :likes, only: %i(create destroy)
   end
-end
+  end
