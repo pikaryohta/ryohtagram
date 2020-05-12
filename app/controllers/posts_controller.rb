@@ -6,6 +6,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.photos.build
   end
+
   def create
     @post = Post.new(post_params)
     if @post.photos.present?
@@ -17,7 +18,6 @@ class PostsController < ApplicationController
       flash[:alert] = "投稿に失敗しました"
     end
   end
-
 
   def index
     @posts = Post.limit(10).includes(:photos, :user).order('created_at DESC')
@@ -36,8 +36,6 @@ class PostsController < ApplicationController
     end
     redirect_to root_path
   end
-
-
 
   private
   def post_params
