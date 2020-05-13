@@ -1,15 +1,39 @@
 <!DOCTYPE html>
+<%# https://getbootstrap.com/docs/4.1/components/navbar/ より %>
+
 <html>
   <head>
     <title>Ryohtagram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+
+  <div id="wrapper">
+<%# 共通部分はpartialで持ってくる。（renderはcallと同じイメージ）_navbar.html.erbを呼び出し（Functionと同じイメージ） %>
+    <%= render 'partial/navbar' if current_user %>  <%# ログインしていないユーザー(current_userではない）にはNavbarを表示しない %>
+
+<%# Deviseのフラッシュメッセージを追加 %>
+    <% if flash[:notice] %>
+      <div class="alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+<%# 共通部分はpartialで持ってくる。（renderはcallと同じイメージ）_navbar.html.erbを呼び出し（Functionと同じイメージ） %>
+    <%= render 'partial/footer' %>
+  </div>
   </body>
 </html>

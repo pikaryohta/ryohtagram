@@ -2,6 +2,11 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',      '6.0.0'
+gem 'bootstrap', '~> 4.4.1'
+gem 'devise', '~> 4.7.1'
+    #==>create  config/initializers/devise.rb
+    #==>create  config/locales/devise.en.yml
+gem 'railties', '>= 6.0.0'
 gem 'puma',       '3.12.1'
 gem 'sass-rails', '5.1.0'
 gem 'webpacker',  '4.0.7'
@@ -9,9 +14,14 @@ gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.4.4', require: false
 
+
 group :development, :test do
   gem 'sqlite3', '1.4.1'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'better_errors'
+  #==>デバッグ用gem
+  gem 'binding_of_caller'
+  #==>デバッグ用gem
 end
 
 group :development do
@@ -38,3 +48,6 @@ end
 
 # Windows ではタイムゾーン情報用の tzinfo-data gem を含める必要があります
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'jquery-rails'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick'

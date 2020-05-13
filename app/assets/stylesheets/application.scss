@@ -1,0 +1,20 @@
+/* Bootstrapのstyleをimportする */
+@import "bootstrap";
+
+/* layouts/navbar.scssファイルのコードを読み込む */
+@import "layouts/navbar";
+
+/* stylesheets/common.scssファイルのコードを読み込む */
+@import "common";
+
+/* users/devise.scssファイルのコードを読み込む　*/
+@import "users/devise";
+
+/* users/show.scssファイルのコードを読み込む　*/
+@import "users/show";
+
+/* users/edit.scssファイルのコードを読み込む　*/
+@import "users/edit";
+
+/* users/posts.scssファイルのコードを読み込む　*/
+@import "posts";
